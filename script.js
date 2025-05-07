@@ -10,3 +10,12 @@ hamburgerBtn.addEventListener('click', () => {
         hamburgerBtn.setAttribute('aria-expanded', "false")
     }
 })
+
+const resizeObserver = new ResizeObserver((entries) => {
+    document.body.classList.add("resizing");
+  
+    requestAnimationFrame(() => {
+      document.body.classList.remove("resizing");
+    });
+  });
+  resizeObserver.observe(document.body);
