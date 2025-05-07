@@ -148,6 +148,13 @@
   html {
     font-family: var(--ff-body);
     line-height: 1.6;
+    scroll-padding: 1rem;
+  }
+
+  @media (prefers-reduced-motion: reduced) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
@@ -539,6 +546,11 @@
 }
 
 @layer utilities {
+
+  [hidden] {
+    display: none;
+  }
+
   .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -596,3 +608,5 @@
     font-size: var(--font-size-lg);
   }
 }
+
+

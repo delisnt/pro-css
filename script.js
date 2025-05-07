@@ -9,5 +9,4 @@ hamburgerBtn.addEventListener('click', () => {
     } else {
         hamburgerBtn.setAttribute('aria-expanded', "false")
     }
-    console.log(navOpened)
 })
